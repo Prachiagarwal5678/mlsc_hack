@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Document title -->
+  <title>Parcade</title>
+  <!-- Stylesheets & Fonts -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700" rel="stylesheet">
+  <!-- Plugins Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/loader/loaders.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome/font-awesome.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/aos/aos.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper/swiper.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/lightgallery.min.css') }}">
+  <!-- Template Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Responsive Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+
+<body>
+  <!-- Loader Start -->
+  <div class="css-loader">
+    <div class="loader-inner line-scale d-flex align-items-center justify-content-center"></div>
+  </div>
+  <!-- Loader End -->
+  <!-- Header Start -->
+  <header class="position-absolute w-100">
+    <div class="container">
+      <div class="top-header d-none d-sm-flex justify-content-between align-items-center">
+        <div class="contact">
+          <a href="tel:+1234567890" class="tel"><i class="fa fa-phone" aria-hidden="true"></i>+9997683310</a>
+          <a href="mailto:tchugh_be19@thapar.edu"><i class="fa fa-envelope" aria-hidden="true"></i>parcade@gmail.com</a>
+        </div>
+        <nav class="d-flex aic">
+          <a href="{{ url_for('signup') }}" class="login"><i class="fa fa-user" aria-hidden="true"></i>Signup</a>
+          <a href="{{ url_for('login') }}" class="login"><i class="fa fa-user" aria-hidden="true"></i>Login</a>
+        </nav>
+      </div>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <a href="#"><img style="width:25%; position: relative; bottom: 12px;" src="{{ url_for('static', filename='images/logo.png') }}" alt="Multipurpose"></a>
+        <div class="group d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+              class="navbar-toggler-icon"></span></button>
+          <!-- <a class="login-icon d-sm-none" href="#"><i class="fa fa-user"></i></a>
+          <a class="cart" href="#"><i class="fa fa-shopping-cart"></i></a> -->
+        </div>
+        <!-- <a class="search-icon d-none d-md-block" href="#"><i class="fa fa-search"></i></a> -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" style="font-size:20px;" href="{{ url_for('home') }}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" style=" font-size:20px; width:100px; padding:8px 0;" href="#services">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" style="font-size:20px; width:150px; padding:8px 0;" href="{{ url_for('booking') }}">Parking Space</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" style="font-size:20px;" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" style="font-size:20px;" href="#">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" style="font-size:20px;" href="#">Shop</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link" style="font-size:20px; width:135px; padding:8px 0;" href="#layout">Parking Layout</a></li> -->
+          </ul>
+          <form class="bg-white search-form" method="get" id="searchform">
+            <div class="input-group">
+              <input class="field form-control" id="s" name="s" type="text" placeholder="Search">
+              <span class="input-group-btn">
+                <input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
+              </span>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Header End -->
+  <!-- Hero Start -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 offset-md-1 col-md-11">
+          <div class="swiper-container hero-slider">
+            <div>
+              <div class="swiper-slide slide-content d-flex align-items-center">
+                <div class="single-slide">
+                  <h1 data-aos="fade-right" data-aos-delay="200">Smart<br> Parking Solution
+                  </h1>
+                  <p data-aos="fade-right" data-aos-delay="600">Crafted by innovative creators for
+                    Expecting
+                    Peoples’s predefined dummy text<br> chunks as necessary, making this the first.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- Add Control -->
+        <span class="arr-left"><i class="fa fa-angle-left"></i></span>
+        <span class="arr-right"><i class="fa fa-angle-right"></i></span>
+      </div>
+      <div class="texture"></div>
+      <div class="diag-bg"></div>
+  </section>
+  <!-- Hero End -->
+  <!-- Call To Action Start -->
+  <!-- <section class="cta" data-aos="fade-up" data-aos-delay="0">
+    <div class="container">
+      <div class="cta-content d-xl-flex align-items-center justify-content-around text-center text-xl-left">
+        <div class="content" data-aos="fade-right" data-aos-delay="200">
+          <h2>FOR BUILDING THE MODERN WEBSITE</h2>
+          <p>Packed with all the goodies you can get, Kallyas is our flagship premium template.</p>
+        </div>
+        <div class="subscribe-btn" data-aos="fade-left" data-aos-delay="400" data-aos-offset="0">
+          <a href="#" class="btn btn-primary">Join Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- Call To Action End -->
+  <!-- Services Start -->
+  <footer>
+    <!-- Widgets Start -->
+    <div class="footer-widgets" style="padding-top:0; margin-top:0;">
+
+    </div>
+    </div>
+    <!-- <div>
+      <div class="container" style="margin:auto;">
+        <div class="row" style="margin:auto;">
+          <div class="" data-aos="fade-right" data-aos-delay="400" data-aos-duration="800" style="margin:auto;">
+            <div class="seatStructure">
+              <center>
+
+                <table id="seatsBlock">
+                  <p id="notification"></p>
+                  <tr>
+                    <td colspan="18">
+                      <div class="screen">SCREEN</div>
+                    </td>
+                    <td rowspan="20">
+                      <div class="smallBox greenBox">Selected Seat</div> <br />
+                      <div class="smallBox redBox">Reserved Seat</div><br />
+                      <div class="smallBox emptyBox">Empty Seat</div><br />
+                    </td>
+
+                    <br />
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td></td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                  </tr>
+
+                  <tr>
+                    <td>A</td>
+                    <td><input type="checkbox" class="seats" value="A1"></td>
+                    <td><input type="checkbox" class="seats" value="A2"></td>
+                    <td><input type="checkbox" class="seats" value="A3"></td>
+                    <td><input type="checkbox" class="seats" value="A4"></td>
+                    <td><input type="checkbox" class="seats" value="A5"></td>
+                    <td class="seatGap"></td>
+                    <td><input type="checkbox" class="seats" value="A6"></td>
+                    <td><input type="checkbox" class="seats" value="A7"></td>
+                    <td><input type="checkbox" class="seats" value="A8"></td>
+                    <td><input type="checkbox" class="seats" value="A9"></td>
+                    <td><input type="checkbox" class="seats" value="A10"></td>
+                    <td><input type="checkbox" class="seats" value="A11"></td>
+                    <td><input type="checkbox" class="seats" value="A12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>B</td>
+                    <td><input type="checkbox" class="seats" value="B1"></td>
+                    <td><input type="checkbox" class="seats" value="B2"></td>
+                    <td><input type="checkbox" class="seats" value="B3"></td>
+                    <td><input type="checkbox" class="seats" value="B4"></td>
+                    <td><input type="checkbox" class="seats" value="B5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="B6"></td>
+                    <td><input type="checkbox" class="seats" value="B7"></td>
+                    <td><input type="checkbox" class="seats" value="B8"></td>
+                    <td><input type="checkbox" class="seats" value="B9"></td>
+                    <td><input type="checkbox" class="seats" value="B10"></td>
+                    <td><input type="checkbox" class="seats" value="B11"></td>
+                    <td><input type="checkbox" class="seats" value="B12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>C</td>
+                    <td><input type="checkbox" class="seats" value="C1"></td>
+                    <td><input type="checkbox" class="seats" value="C2"></td>
+                    <td><input type="checkbox" class="seats" value="C3"></td>
+                    <td><input type="checkbox" class="seats" value="C4"></td>
+                    <td><input type="checkbox" class="seats" value="C5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="C6"></td>
+                    <td><input type="checkbox" class="seats" value="C7"></td>
+                    <td><input type="checkbox" class="seats" value="C8"></td>
+                    <td><input type="checkbox" class="seats" value="C9"></td>
+                    <td><input type="checkbox" class="seats" value="C10"></td>
+                    <td><input type="checkbox" class="seats" value="C11"></td>
+                    <td><input type="checkbox" class="seats" value="C12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>D</td>
+                    <td><input type="checkbox" class="seats" value="D1"></td>
+                    <td><input type="checkbox" class="seats" value="D2"></td>
+                    <td><input type="checkbox" class="seats" value="D3"></td>
+                    <td><input type="checkbox" class="seats" value="D4"></td>
+                    <td><input type="checkbox" class="seats" value="D5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="D6"></td>
+                    <td><input type="checkbox" class="seats" value="D7"></td>
+                    <td><input type="checkbox" class="seats" value="D8"></td>
+                    <td><input type="checkbox" class="seats" value="D9"></td>
+                    <td><input type="checkbox" class="seats" value="D10"></td>
+                    <td><input type="checkbox" class="seats" value="D11"></td>
+                    <td><input type="checkbox" class="seats" value="D12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>E</td>
+                    <td><input type="checkbox" class="seats" value="E1"></td>
+                    <td><input type="checkbox" class="seats" value="E2"></td>
+                    <td><input type="checkbox" class="seats" value="E3"></td>
+                    <td><input type="checkbox" class="seats" value="E4"></td>
+                    <td><input type="checkbox" class="seats" value="E5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="E6"></td>
+                    <td><input type="checkbox" class="seats" value="E7"></td>
+                    <td><input type="checkbox" class="seats" value="E8"></td>
+                    <td><input type="checkbox" class="seats" value="E9"></td>
+                    <td><input type="checkbox" class="seats" value="E10"></td>
+                    <td><input type="checkbox" class="seats" value="E11"></td>
+                    <td><input type="checkbox" class="seats" value="E12"></td>
+                  </tr>
+
+                  <tr class="seatVGap"></tr>
+
+                  <tr>
+                    <td>F</td>
+                    <td><input type="checkbox" class="seats" value="F1"></td>
+                    <td><input type="checkbox" class="seats" value="F2"></td>
+                    <td><input type="checkbox" class="seats" value="F3"></td>
+                    <td><input type="checkbox" class="seats" value="F4"></td>
+                    <td><input type="checkbox" class="seats" value="F5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="F6"></td>
+                    <td><input type="checkbox" class="seats" value="F7"></td>
+                    <td><input type="checkbox" class="seats" value="F8"></td>
+                    <td><input type="checkbox" class="seats" value="F9"></td>
+                    <td><input type="checkbox" class="seats" value="F10"></td>
+                    <td><input type="checkbox" class="seats" value="F11"></td>
+                    <td><input type="checkbox" class="seats" value="F12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>G</td>
+                    <td><input type="checkbox" class="seats" value="G1"></td>
+                    <td><input type="checkbox" class="seats" value="G2"></td>
+                    <td><input type="checkbox" class="seats" value="G3"></td>
+                    <td><input type="checkbox" class="seats" value="G4"></td>
+                    <td><input type="checkbox" class="seats" value="G5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="G6"></td>
+                    <td><input type="checkbox" class="seats" value="G7"></td>
+                    <td><input type="checkbox" class="seats" value="G8"></td>
+                    <td><input type="checkbox" class="seats" value="G9"></td>
+                    <td><input type="checkbox" class="seats" value="G10"></td>
+                    <td><input type="checkbox" class="seats" value="G11"></td>
+                    <td><input type="checkbox" class="seats" value="G12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>H</td>
+                    <td><input type="checkbox" class="seats" value="H1"></td>
+                    <td><input type="checkbox" class="seats" value="H2"></td>
+                    <td><input type="checkbox" class="seats" value="H3"></td>
+                    <td><input type="checkbox" class="seats" value="H4"></td>
+                    <td><input type="checkbox" class="seats" value="H5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="H6"></td>
+                    <td><input type="checkbox" class="seats" value="H7"></td>
+                    <td><input type="checkbox" class="seats" value="H8"></td>
+                    <td><input type="checkbox" class="seats" value="H9"></td>
+                    <td><input type="checkbox" class="seats" value="H10"></td>
+                    <td><input type="checkbox" class="seats" value="H11"></td>
+                    <td><input type="checkbox" class="seats" value="H12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>I</td>
+                    <td><input type="checkbox" class="seats" value="I1"></td>
+                    <td><input type="checkbox" class="seats" value="I2"></td>
+                    <td><input type="checkbox" class="seats" value="I3"></td>
+                    <td><input type="checkbox" class="seats" value="I4"></td>
+                    <td><input type="checkbox" class="seats" value="I5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="I6"></td>
+                    <td><input type="checkbox" class="seats" value="I7"></td>
+                    <td><input type="checkbox" class="seats" value="I8"></td>
+                    <td><input type="checkbox" class="seats" value="I9"></td>
+                    <td><input type="checkbox" class="seats" value="I10"></td>
+                    <td><input type="checkbox" class="seats" value="I11"></td>
+                    <td><input type="checkbox" class="seats" value="I12"></td>
+                  </tr>
+
+                  <tr>
+                    <td>J</td>
+                    <td><input type="checkbox" class="seats" value="J1"></td>
+                    <td><input type="checkbox" class="seats" value="J2"></td>
+                    <td><input type="checkbox" class="seats" value="J3"></td>
+                    <td><input type="checkbox" class="seats" value="J4"></td>
+                    <td><input type="checkbox" class="seats" value="J5"></td>
+                    <td></td>
+                    <td><input type="checkbox" class="seats" value="J6"></td>
+                    <td><input type="checkbox" class="seats" value="J7"></td>
+                    <td><input type="checkbox" class="seats" value="J8"></td>
+                    <td><input type="checkbox" class="seats" value="J9"></td>
+                    <td><input type="checkbox" class="seats" value="J10"></td>
+                    <td><input type="checkbox" class="seats" value="J11"></td>
+                    <td><input type="checkbox" class="seats" value="J12"></td>
+                  </tr>
+
+
+                </table>
+
+                <br /><button onclick="updateTextArea()">Confirm Selection</button>
+              </center>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div> -->
+    </div>
+    </div> -->
+    </div>
+    <!-- Widgets End -->
+    <!-- Foot Note Start -->
+    <!-- Foot Note End -->
+  </footer>
+  <section class="services" id="services">
+    <div class="container">
+      <div class="title text-center">
+        <h1 class="title-blue">Why Choose Us</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4">
+            <div class="media" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+              <img class="mr-4" src="{{ url_for('static', filename='images/service1.png') }}" alt="Web Development">
+              <div class="media-body">
+                <h5>Reduced Global Warming</h5>
+                People being aware of the slots would park thier automobile right where it should be without going aound to find one.
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="media" data-aos="fade-up" data-aos-delay="400" data-aos-duration="600">
+              <img class="mr-4" src="{{ url_for('static', filename='images/service2.png') }}" alt="Web Development">
+              <div class="media-body">
+                <h5>Time Efficient</h5>
+
+                Getting the nearest vacant location would be beneficial in saving time.
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="media" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+              <img class="mr-4" src="{{ url_for('static', filename='images/service3.png') }}" alt="Web Development">
+              <div class="media-body">
+                <h5>
+                  Eco-friendly</h5>
+                Never troubled in finding a slot and getting the nearest one would not only reduce global warming but fuel.
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services End -->
+  <!-- Featured Start -->
+  <section class="featured" style="margin:auto;">
+    -->
+    </div>
+    </div>
+  </section>
+
+  </div>
+  <div class="test-pagination"></div>
+  </div>
+  </div>
+  </div>
+  </section> -->
+
+  <div class="foot-note">
+    <div class="container">
+      <div class="footer-content text-center text-lg-left d-lg-flex justify-content-between align-items-center">
+        <p class="mb-0" data-aos="fade-right" data-aos-offset="0">&copy; 2021 All Rights Reserved. Design by <a href="#" target="_blank" class="fh5-link">AlphaQBeta</a>.</p>
+        <p class="mb-0" data-aos="fade-left" data-aos-offset="0"><a href="#">Terms Of Use</a><a href="#">Privacy & Security
+            Statement</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
+  <!--Plugins-->
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+  <script src="{{ url_for('static', filename='images/js/loaders.css.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/swiper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lightgallery-all.min.js') }}"></script>
+  <!--Template Script-->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
